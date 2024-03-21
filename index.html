@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="calculatorLink">Matrix Calculator</a></li>
+            <li><a href="#" id="eliminationLink">Matrix Elimination</a></li>
+        </ul>
+    </nav>
+    <div id="calculatorSection">
+        <div class="calculator">
+            <div class="matrix-input">
+                <label for="rowsA">Rows (Matrix A):</label>
+                <input type="number" id="rowsA" min="1" value="2">
+                <label for="colsA">Columns (Matrix A):</label>
+                <input type="number" id="colsA" min="1" value="2">
+                <button id="createMatrixA">Create Matrix A</button>
+                <div id="matrixAInput"></div>
+
+                <label for="rowsB">Rows (Matrix B):</label>
+                <input type="number" id="rowsB" min="1" value="2">
+                <label for="colsB">Columns (Matrix B):</label>
+                <input type="number" id="colsB" min="1" value="2">
+                <button id="createMatrixB">Create Matrix B</button>
+                <div id="matrixBInput"></div>
+            </div>
+            <div class="operations">
+                <button id="add">Add</button>
+                <button id="subtract">Subtract</button>
+                <button id="multiply">Multiply</button>
+            </div>
+            <div class="result">
+                <h2>Result</h2>
+                <textarea id="resultCalculator" rows="10" cols="10" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div id="eliminationSection" style="display: none;">
+        <div class="calculator">
+            <div class="matrix-input">
+                <label for="rowsR">Rows :</label>
+                <input type="number" id="rowsR" min="1" value="2">
+                <label for="colsR">Columns :</label>
+                <input type="number" id="colsR" min="1" value="2">
+                <button id="createMatrixR">Create Matrix</button>
+                <div id="matrixRInput"></div>
+            </div>
+            <div class="operations">
+                <button id="reducedRowEchelon">Reduced Row Echelon</button>
+                <button id="rowEchelon">Row Echelon</button>
+            </div>
+            <div class="result">
+                <h2>Result</h2>
+                <textarea id="resultElimination" rows="10" cols="10" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
